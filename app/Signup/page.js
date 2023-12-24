@@ -21,7 +21,8 @@ const Page = () => {
       console.log("hello")
       createUserWithEmailAndPassword(email,password)
   
-      window.sessionStorage.setItem('user',true)
+      
+    sessionStorage.setItem('user',true)
       setEmail('')
       setPassword('')
       setPasswordAgain('')
