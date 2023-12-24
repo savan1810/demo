@@ -21,7 +21,7 @@ const Page = () => {
     try{
         event.preventDefault()
         signInWithEmailAndPassword(email, password);
-        sessionStorage.setItem('user', true)
+        window.sessionStorage.setItem('user', true)
         setEmail('');
         setPassword('');
         router.push('/')
