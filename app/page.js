@@ -25,7 +25,7 @@ export default function Home() {
     const [user] = useAuthState(auth)
     const router = useRouter()
 
-    const userSession = window.sessionStorage.getItem('user')
+    const userSession = sessionStorage.getItem('user')
     if (!user && !userSession) {
         router.push('/login')
     }
@@ -72,7 +72,8 @@ export default function Home() {
 
                 <button className="text-white border  px-4  py-2 rounded-md border-sky-400 hover:bg-sky-400" onClick={() => {
                     signOut(auth)
-                    window.sessionStorage.removeItem('user')
+                    
+    sessionStorage.removeItem('user')
                 }}>
                     Log out
                 </button>
